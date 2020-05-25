@@ -26,7 +26,9 @@ export default Vue.extend({
         h('title', context.props.title || context.props.name),
         h('use', {
           attrs: {
-            'xlink:href': `#vt-svg-${context.props.name}`,
+            // 修正過時語法
+            // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xlink:href#use
+            href: `#vt-svg-${context.props.name}`,
           },
         }),
       ],
